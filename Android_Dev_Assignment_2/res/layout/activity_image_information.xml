@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ImageInformationActivity" >
+
+    <ImageView
+        android:id="@+id/imgImageResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblImageWidth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/lblImageSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblImageheight"
+        android:layout_below="@+id/lblImageheight"
+        android:text="@string/lblImageSize" />
+
+    <TextView
+        android:id="@+id/lblImageLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblImageSize"
+        android:layout_below="@+id/lblImageSize"
+        android:text="@string/lblImageLocation" />
+
+    <TextView
+        android:id="@+id/lblImageRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblImageLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/lblImageRating"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblImageheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblImageWidth"
+        android:layout_below="@+id/lblImageWidth"
+        android:text="@string/lblImageHeight" />
+
+    <TextView
+        android:id="@+id/lblImageWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgImageResult"
+        android:layout_centerVertical="true"
+        android:text="@string/lblImageWidth" />
+
+    <RatingBar
+        android:id="@+id/rtngbrImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblImageRating"
+        android:layout_centerHorizontal="true"
+        android:onClick="onRtnBarClicked" />
+
+    <Button
+        android:id="@+id/btnBack"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="onBtnBackClicked"
+        android:text="@string/lblBack" />
+
+    <TextView
+        android:id="@+id/lblImageWidthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblImageheight"
+        android:layout_alignRight="@+id/imgImageResult"
+        android:text="@string/lblImageWidth" />
+
+    <TextView
+        android:id="@+id/lblHeightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblImageSize"
+        android:layout_alignRight="@+id/lblImageWidthValue"
+        android:text="@string/lblImageHeight" />
+
+    <TextView
+        android:id="@+id/lblSizeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblImageSize"
+        android:layout_alignBottom="@+id/lblImageSize"
+        android:layout_alignRight="@+id/lblHeightValue"
+        android:text="@string/lblImageSizeValue" />
+
+    <TextView
+        android:id="@+id/lblLocationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblImageLocation"
+        android:layout_below="@+id/lblImageLocation"
+        android:text="@string/lblLocationValue" />
+
+</RelativeLayout>
